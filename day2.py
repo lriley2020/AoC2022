@@ -49,3 +49,33 @@ print(totscore)
 
 ## Part 2 ##
 
+mapping = {"X":0, "Y":3, "Z":6}
+
+def pickMove(opchoice, reqresult):
+    ## Returns 0 for loss, 3 for draw and 6 for win ##
+    match opchoice:
+        case "A":
+            match reqresult:
+                case 3: return "X"
+                case 6: return "Y"
+                case 0: return "Z"
+        case "B":
+            match reqresult:
+                case 0: return "X"
+                case 3: return "Y"
+                case 6: return "Z"
+        case "C":
+            match reqresult:
+                case 6: return "X"
+                case 0: return "Y"
+                case 3: return "Z"
+
+totscore2 = 0
+for play in plays:
+    play[1] = mapping[play[1]]
+    mychoice = pickMove(play[0], play[1])
+    totscore2 += (choiceVal[mychoice] + play[1])
+
+print(totscore2)
+
+
