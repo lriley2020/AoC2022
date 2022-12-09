@@ -4,7 +4,7 @@ with open("day5input.txt", "r") as f:
 columns = {}
 moves = []
 for line in theinput:
-    if not any([char.isdigit() for char in line]):
+    if not any([char.isdigit() for char in line]) and line != "\n":
         count = 0
         for i in range(1, 34, 4):
             count += 1
