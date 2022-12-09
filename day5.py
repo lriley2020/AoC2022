@@ -22,5 +22,26 @@ for line in theinput:
             moves.append(steps)
 
 
-print(columns)
-print(moves)
+result = '\n'.join(
+  f'{key}: {value}' for key, value in sorted(columns.items())
+)
+print(result)
+
+for move in moves[:36]:
+    copied = columns[move[1]][:move[0]]
+    del columns[move[1]][:move[0]]
+    copied.reverse()
+    columns[move[2]] = [*copied, *columns[move[2]]]
+
+
+print()
+result = '\n'.join(
+  f'{key}: {value}' for key, value in sorted(columns.items())
+)
+print(result)
+
+
+#thecode = ""
+#for column in columns.values():
+#    thecode += column[-1]
+#print(thecode)
