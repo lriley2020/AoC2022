@@ -1,3 +1,5 @@
+### This still doesn't work yet! ###
+
 with open("day5input.txt", "r") as f:
     theinput = f.readlines()
 
@@ -27,11 +29,14 @@ result = '\n'.join(
 )
 print(result)
 
-for move in moves[:36]:
-    copied = columns[move[1]][:move[0]]
-    del columns[move[1]][:move[0]]
+for move in moves[:1]:
+    items = move[0]
+    startstack = move[1]
+    endstack = move[2]
+    copied = columns[startstack][:items]
+    del columns[startstack][:items]
     copied.reverse()
-    columns[move[2]] = [*copied, *columns[move[2]]]
+    columns[endstack] = [*copied, *columns[endstack]]
 
 
 print()
