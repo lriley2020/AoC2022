@@ -1,7 +1,7 @@
 from string import ascii_lowercase, ascii_uppercase
 priorities = list(ascii_lowercase + ascii_uppercase)
 
-with open("day3input.txt", "r") as f:
+with open("inputs/day3input.txt", "r") as f:
     bags = f.read().splitlines()
 
 def addUp(lis):

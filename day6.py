@@ -1,4 +1,4 @@
-with open("day6input.txt", "r") as f:
+with open("inputs/day6input.txt", "r") as f:
     buffer = f.readline()
 
 for i in range(len(buffer)):

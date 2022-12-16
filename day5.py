@@ -1,6 +1,6 @@
 ### This still doesn't work yet! ###
 
-with open("day5input.txt", "r") as f:
+with open("inputs/day5input.txt", "r") as f:
     theinput = f.readlines()
 
 columns = {}

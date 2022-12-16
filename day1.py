@@ -3,7 +3,7 @@ elves = []
 def addUp(*meals):
     return sum(*meals)
 
-with open("day1input.txt", "r") as f:
+with open("inputs/day1input.txt", "r") as f:
     newelf = []
     for line in f.readlines():
         if len(line.strip()) == 0:

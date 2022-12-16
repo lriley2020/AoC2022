@@ -37,7 +37,7 @@ def calcScore(op,mc):
 
 ## get the input from the challenge ##
 plays = []
-with open("day2input.txt", "r") as f:
+with open("inputs/day2input.txt", "r") as f:
     for line in f.readlines():
         plays.append((line.split()))
 
